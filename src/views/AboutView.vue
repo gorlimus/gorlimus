@@ -1,7 +1,7 @@
 <template>
-  <main>
+  <main id="about">
     <div
-      class="flex max-h-screen items-center justify-evenly py-24 bg-gray-800 shadow-2xl"
+      class="flex w-full h-screen items-center justify-evenly py-24 bg-gray-800 shadow-2xl"
     >
       <div class="max-w-xl text-left">
         <h2
@@ -16,7 +16,7 @@
           <span>
             I've helped hundreds of people create content and increase their
             sales. </span
-          >My commercials we created for companies like P&G, NYX and Colin's.
+          >My commercials were created for companies like P&G, NYX and Colin's.
           Most recently, I led Alpro's advertising campaign as Lead Director and
           Creative Producer.
           <br />
@@ -42,8 +42,8 @@
         <img
           class="rounded-full"
           src="@/assets/images/me.jpeg"
-          width="400"
-          height="400"
+          width="500"
+          height="500"
         />
       </div>
     </div>

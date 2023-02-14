@@ -1,22 +1,30 @@
 <template>
   <app-header />
-  <router-view />
+  <home-view />
+  <about-view />
+  <projects-view />
+  <contacts-view />
 </template>
 <script>
-// import HomeView from "@/views/HomeView.vue";
-// import AboutView from "@/views/AboutView.vue";
-// import ProjectsView from "@/views/ProjectsView.vue";
-// import ContactsView from "@/views/ContactsView.vue";
+import HomeView from "@/views/HomeView.vue";
+import AboutView from "@/views/AboutView.vue";
+import ProjectsView from "@/views/ProjectsView.vue";
+import ContactsView from "@/views/ContactsView.vue";
 import AppHeader from "@/components/AppHeader.vue";
 
 export default {
   name: "app",
   components: {
     AppHeader,
-    // HomeView,
-    // AboutView,
-    // ProjectsView,
-    // ContactsView,
+    HomeView,
+    AboutView,
+    ProjectsView,
+    ContactsView,
+  },
+  methods: {
+    toggleClass() {
+      this.isActive = !this.isActive;
+    },
   },
 };
 </script>
