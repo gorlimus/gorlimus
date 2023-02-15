@@ -1,15 +1,16 @@
 <template>
   <main id="about">
     <div
-      class="flex w-full h-screen items-center justify-evenly py-24 bg-gray-800 shadow-2xl"
+      class="flex w-full h-screen items-center justify-center py-24 shadow-2xl"
     >
-      <div class="max-w-xl text-left">
-        <h2
-          class="pb-10 text-8xl text-right font-bold tracking-tight text-secondary"
-        >
-          about
-        </h2>
-        <p class="text-sm leading-6 text-primary">
+      <img
+        src="@/assets/images/me.jpeg"
+        :class="[isActive ? 'hidden' : 'object-cover h-5/6 rounded-full']"
+        @click.prevent="toggleClass"
+      />
+
+      <div class="" :class="[isActive ? 'max-w-xl' : 'hidden']">
+        <p class="text-left text-sm leading-6 text-primary">
           Hi! I'm Vova. I'm a developer with a serious love for filming. I've
           spent the last few years filming commercials for brands at 10+
           different production houses and creative agencies where
@@ -38,19 +39,19 @@
           development.
         </p>
       </div>
-      <div>
-        <img
-          class="rounded-full"
-          src="@/assets/images/me.jpeg"
-          width="500"
-          height="500"
-        />
-      </div>
     </div>
   </main>
 </template>
 <script>
 export default {
   name: "AboutView",
+  data: function () {
+    return { isActive: false };
+  },
+  methods: {
+    toggleClass() {
+      this.isActive = !this.isActive;
+    },
+  },
 };
 </script>

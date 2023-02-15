@@ -1,25 +1,14 @@
 <template>
   <app-header />
-  <home-view />
-  <about-view />
-  <projects-view />
-  <contacts-view />
+  <router-view />
 </template>
 <script>
-import HomeView from "@/views/HomeView.vue";
-import AboutView from "@/views/AboutView.vue";
-import ProjectsView from "@/views/ProjectsView.vue";
-import ContactsView from "@/views/ContactsView.vue";
 import AppHeader from "@/components/AppHeader.vue";
 
 export default {
   name: "app",
   components: {
     AppHeader,
-    HomeView,
-    AboutView,
-    ProjectsView,
-    ContactsView,
   },
   methods: {
     toggleClass() {

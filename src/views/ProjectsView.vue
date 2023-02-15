@@ -1,23 +1,24 @@
 <template>
   <main id="projects">
     <div
-      class="flex flex-col items-center w-full h-screen bg-slate-700"
-      :class="[
-        isActive
-          ? 'justify-start py-12 gap-10 text-secondary'
-          : 'justify-center text-primary ',
-      ]"
+      class="flex flex-col items-center justify-center w-full h-screen text-primary"
+      :class="[isActive ? 'py-12 gap-10' : 'justify-center']"
     >
-      <button class="" @click.prevent="toggleClass">
-        <h1 class="text-4xl font-bold tracking-tight sm:text-6xl">projects</h1>
+      <button
+        :class="[isActive ? 'hidden' : 'ver']"
+        @click.prevent="toggleClass"
+      >
+        <h2 class="text-6xl">projects</h2>
       </button>
       <div
         v-if="isActive"
-        class="flex flex-row w-5/6 h-5/6 justify-around gap-10"
+        class="flex flex-row w-5/6 h-4/5 justify-around gap-10"
       >
-        <div class="flex flex-col items-center rounded-3xl bg-slate-500">
-          <h5 class="p-4 text-3xl text-center font-bold">Music Project</h5>
-          <p class="px-12 text-primary">
+        <div
+          class="project-gre flex flex-col items-center rounded-3xl bg-slate-700"
+        >
+          <h3 class="p-4 text-3xl text-center text-greAcc">Music Project</h3>
+          <p class="px-12">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error
             alias, possimus eos perspiciatis praesentium maiores necessitatibus
             illo quis deserunt nisi cumque nesciunt repudiandae, iure totam
@@ -41,8 +42,10 @@
             <li>Vitest</li>
           </ul>
         </div>
-        <div class="flex flex-col items-center rounded-3xl bg-slate-500">
-          <h5 class="p-4 text-3xl text-center font-bold">YelpCamp Project</h5>
+        <div
+          class="project-yel flex flex-col items-center rounded-3xl bg-slate-700"
+        >
+          <h3 class="p-4 text-3xl text-center text-yelAcc">YelpCamp Project</h3>
           <p class="px-12 text-primary">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error
             alias, possimus eos perspiciatis praesentium maiores necessitatibus

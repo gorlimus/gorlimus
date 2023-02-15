@@ -1,30 +1,85 @@
 html {
   background-color: rgb(30, 41, 59);
 }
-a {
-  position: relative;
-  transition: all 0.15s ease;
+h1,
+h2,
+h4,
+h5 {
+  text-transform: uppercase;
+  font-weight: 100;
+}
+h3 {
+  text-transform: inherit;
+}
+p {
+  font-weight: 100;
 }
 
-a::before {
+button,
+a {
+  text-transform: uppercase;
+  position: relative;
+  padding: 4px;
+}
+
+li a::before {
   content: "";
   position: absolute;
   width: 100%;
-  height: 4px;
-  border-radius: 4px;
+  height: 1px;
+  border-radius: 1px;
   background-color: #e07a5f;
   bottom: 0;
   left: 0;
   transform-origin: right;
   transform: scaleX(0);
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.2s ease-in-out;
 }
 
-a:hover::before {
+li a:hover::before {
   transform-origin: left;
   transform: scaleX(1);
 }
 
-span {
+.ver,
+.hor {
+  transition: all 0.7s ease;
+}
+
+.ver:hover {
   color: #e07a5f;
+  transform: scale(1.1);
+  text-shadow: 0em -10em #81b29a, 0em 10em #f2cc8f;
+}
+
+.hor:hover {
+  color: #e07a5f;
+  transform: scale(1.1);
+  text-shadow: -20em 0em #81b29a, 20em 0em #f2cc8f;
+}
+
+.hor-active {
+  transition: all 0.7s ease;
+  transform: scale(0.9);
+}
+
+.project-gre,
+.project-yel {
+  transform: scale(0.9);
+  transition: all 0.7s ease;
+}
+
+.project-gre:hover {
+  box-shadow: 0 10px 15px -3px #81b29a80;
+  transform: scale(1);
+  transition: all 0.7s ease;
+}
+.project-yel:hover {
+  box-shadow: 0 10px 15px -3px #f2cc8f80;
+  transform: scale(1);
+  transition: all 0.7s ease;
+}
+
+span {
+  color: #81b29a;
 }

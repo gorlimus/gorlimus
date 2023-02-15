@@ -1,8 +1,10 @@
 <template>
   <main id="home">
-    <div class="w-full h-screen py-72 bg-slate-900">
-      <div class="text-center">
-        <h1 class="text-8xl font-bold tracking-tight text-primary">gorlimus</h1>
+    <div class="flex items-center justify-center w-full h-screen py-72">
+      <div class="ver text-primary text-center">
+        <router-link :to="{ name: 'about' }">
+          <h1 class="text-8xl tracking-tight">gorlimus</h1>
+        </router-link>
       </div>
     </div>
   </main>

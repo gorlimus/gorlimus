@@ -35,7 +35,8 @@ const routes = [
 const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
   routes,
-  linkExactActiveClass: "text-secondary",
+  linkExactActiveClass:
+    "transition ease-in-out duration-300 text-secondary scale-125 translate-y-1",
 });
 
 export default router;
