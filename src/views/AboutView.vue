@@ -1,16 +1,22 @@
 <template>
   <main id="about">
-    <div
-      class="flex w-full h-screen items-center justify-center py-24 shadow-2xl"
-    >
-      <img
-        src="@/assets/images/me.jpeg"
-        :class="[isActive ? 'hidden' : 'object-cover h-5/6 rounded-full']"
+    <div class="flex relative w-full h-screen items-center justify-center">
+      <div
+        class="absolute h-4/6 z-10 transition ease-in-out duration-700"
+        :class="[isActive ? 'translate-x-1/2 scale-90' : '']"
         @click.prevent="toggleClass"
-      />
+      >
+        <img
+          src="@/assets/images/me.jpeg"
+          class="ab object-cover h-full rounded-full"
+        />
+      </div>
 
-      <div class="" :class="[isActive ? 'max-w-xl' : 'hidden']">
-        <p class="text-left text-sm leading-6 text-primary">
+      <div
+        class="w-1/2 h-4/6 transition ease-in-out duration-700 z-0 pl-20 py-6"
+        :class="[isActive ? '-translate-x-1/2' : 'opacity-0']"
+      >
+        <p class="text-left text-md leading-6 text-primary">
           Hi! I'm Vova. I'm a developer with a serious love for filming. I've
           spent the last few years filming commercials for brands at 10+
           different production houses and creative agencies where

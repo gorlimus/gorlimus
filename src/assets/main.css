@@ -15,6 +15,14 @@ p {
   font-weight: 100;
 }
 
+i {
+  /* display: flex; */
+  /* place-items: center; */
+  /* place-content: center; */
+  /* width: 50px; */
+  /* height: 50px; */
+}
+
 button,
 a {
   text-transform: uppercase;
@@ -43,6 +51,15 @@ li a:hover::before {
 
 .ver,
 .hor {
+  position: absolute;
+  transition: all 0.7s ease;
+}
+
+.off {
+  position: absolute;
+  text-shadow: -20em 0em #81b29a, 20em 0em #f2cc8f;
+  filter: blur(4px);
+  opacity: 25%;
   transition: all 0.7s ease;
 }
 
@@ -71,13 +88,25 @@ li a:hover::before {
 
 .project-gre:hover {
   box-shadow: 0 10px 15px -3px #81b29a80;
+  background-color: #81b29a10;
   transform: scale(1);
   transition: all 0.7s ease;
 }
 .project-yel:hover {
   box-shadow: 0 10px 15px -3px #f2cc8f80;
+  background-color: #f2cc8f10;
   transform: scale(1);
   transition: all 0.7s ease;
+}
+
+.ab {
+  transition: all 0.3s linear;
+}
+
+.ab:hover {
+  box-shadow: 0 10px 15px -3px #81b29a80;
+  transform: scale(0.95);
+  transition: all 0.3s linear;
 }
 
 span {

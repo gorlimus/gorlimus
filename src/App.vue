@@ -1,6 +1,10 @@
 <template>
   <app-header />
-  <router-view />
+  <router-view v-slot="{ Component }">
+    <transition name="fade" mode="out-in">
+      <component :is="Component"></component>
+    </transition>
+  </router-view>
 </template>
 <script>
 import AppHeader from "@/components/AppHeader.vue";
@@ -20,12 +24,15 @@ export default {
 <style>
 .fade-enter-from {
   opacity: 0;
+  transform: translate(0%, 5%);
+  transition: all 0.4s ease-out;
 }
 .fade-enter-active {
-  transition: all 0.5s linear;
+  transition: all 0.3s ease-in-out;
 }
 .fade-leave-to {
-  transition: all 0.5 linear;
+  transform: translate(0%, -5%);
   opacity: 0;
+  transition: all 0.3s ease-in;
 }
 </style>
