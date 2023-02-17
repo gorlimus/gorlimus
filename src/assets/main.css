@@ -89,7 +89,7 @@ li a:hover::before {
 .project-gre:hover {
   box-shadow: 0 10px 15px -3px #81b29a80;
   background-color: #81b29a10;
-  transform: scale(1);
+  transform: scale(0.95);
   transition: all 0.7s ease;
 }
 .project-yel:hover {

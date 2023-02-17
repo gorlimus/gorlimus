@@ -5,32 +5,23 @@
         <h2 class="text-4xl tracking-tight text-primary">thank you</h2>
       </div>
       <div class="flex justify-evenly items-end">
-        <a
-          ><img
-            src="@/assets/images/avatar.jpg"
-            class="object-cover h-20 w-20 rounded-full"
-        /></a>
-        <a
-          ><img
-            src="@/assets/images/avatar.jpg"
-            class="object-cover h-20 w-20 rounded-full"
-        /></a>
-        <a
-          ><img
-            src="@/assets/images/avatar.jpg"
-            class="object-cover h-20 w-20 rounded-full"
-        /></a>
-        <a
-          ><img
-            src="@/assets/images/avatar.jpg"
-            class="object-cover h-20 w-20 rounded-full"
-        /></a>
+        <i><icon-github /> </i>
+        <i><icon-linkedin /> </i>
+        <i><icon-vimeo /> </i>
       </div>
     </div>
   </main>
 </template>
 <script>
+import IconLinkedin from "@/assets/icons/IconLinkedin.vue";
+import IconGithub from "@/assets/icons/IconGithub.vue";
+import IconVimeo from "@/assets/icons/IconVimeo.vue";
 export default {
   name: "ContactsView",
+  components: {
+    IconLinkedin,
+    IconGithub,
+    IconVimeo,
+  },
 };
 </script>

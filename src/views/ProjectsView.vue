@@ -1,21 +1,27 @@
 <template>
   <main id="projects">
-    <div class="flex items-center justify-center w-full h-screen text-primary">
+    <div
+      class="flex p-4 items-center justify-center w-full h-screen text-primary"
+    >
       <button
-        :class="[isActive ? 'off' : 'hor z-10']"
+        :class="[isActive ? 'off' : 'z-10 ver']"
         @click.prevent="toggleClass"
       >
         <h2 class="text-6xl">projects</h2>
       </button>
       <div
-        :class="[isActive ? 'opacity' : 'scale-75 opacity-0 z-0']"
-        class="flex flex-row w-5/6 h-4/5 justify-around gap-10 transition ease-in-out duration-700"
+        :class="[isActive ? 'opacity' : ' scale-75 opacity-0 z-0']"
+        class="flex flex-col lg:flex-row w-auto h-auto py-12 justify-around gap-10 transition ease-in-out duration-700"
       >
         <div
-          class="project-gre flex flex-col items-center rounded-3xl bg-gradient-to-b from-slate-700"
+          class="project-gre md:max-w-2xl lg:max-w-lg flex flex-col justify-around items-center rounded-3xl bg-gradient-to-b from-slate-700"
         >
-          <h3 class="p-8 text-3xl text-center text-greAcc">Music Project</h3>
-          <p class="px-12">
+          <h3
+            class="p-4 sm:p-4 md:p-2 lg:p-4 text-3xl sm:text-xl md:text-2xl lg:text-3xl text-center text-greAcc"
+          >
+            Music Project
+          </h3>
+          <p class="px-10 text-md sm:text-sm md:text-lg lg:text-md">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error
             alias, possimus eos perspiciatis praesentium maiores necessitatibus
             illo quis deserunt nisi cumque nesciunt repudiandae, iure totam
@@ -25,8 +31,9 @@
             assumenda quasi laborum illum exercitationem. Reiciendis, distinctio
             sed?
           </p>
+
           <ul
-            class="grid py-12 gap-y-4 gap-x-20 grid-cols-3 grid-rows-2 text-center"
+            class="grid object-left-bottom py-4 gap-y-4 gap-x-14 sm:gap-x-12 grid-cols-3 sm:grid-cols-6 sm:grid-rows-1 lg:grid-cols-3"
           >
             <i class=""><icon-vue /></i>
             <i class=""><icon-tailwind /></i>
@@ -36,11 +43,15 @@
             <i class=""><icon-pinia /></i>
           </ul>
         </div>
-        <div
-          class="project-yel flex flex-col items-center rounded-3xl bg-gradient-to-b from-slate-700"
+        <!-- <div
+          class="project-yel md:max-w-2xl lg:max-w-md flex flex-col justify-around items-center rounded-3xl bg-gradient-to-b from-slate-700"
         >
-          <h3 class="p-8 text-3xl text-center text-yelAcc">YelpCamp Project</h3>
-          <p class="px-12 text-primary">
+          <h3
+            class="p-4 sm:p-4 md:p-2 lg:p-6 text-3xl sm:text-xl md:text-2xl lg:text-3xl text-center text-yelAcc"
+          >
+            YelpCamp Project
+          </h3>
+          <p class="px-10 text-md sm:text-sm md:text-lg lg:text-md">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error
             alias, possimus eos perspiciatis praesentium maiores necessitatibus
             illo quis deserunt nisi cumque nesciunt repudiandae, iure totam
@@ -51,7 +62,7 @@
             sed?
           </p>
           <ul
-            class="grid py-12 gap-y-4 gap-x-20 grid-cols-3 grid-rows-2 text-center"
+            class="grid object-left-bottom py-4 gap-y-4 gap-x-14 sm:gap-x-12 grid-cols-3 sm:grid-cols-6 sm:grid-rows-1 lg:grid-cols-3"
           >
             <i class=""><icon-html /></i>
             <i class=""><icon-css /></i>
@@ -60,7 +71,7 @@
             <i class=""><icon-mongo /></i>
             <i class=""><icon-git /></i>
           </ul>
-        </div>
+        </div> -->
       </div>
     </div>
   </main>

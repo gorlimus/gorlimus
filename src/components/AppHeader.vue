@@ -4,14 +4,14 @@
     :class="[isActive ? 'w-fit' : 'w-full']"
   >
     <nav class="flex w-full justify-between">
-      <button class="ver absolute m-4" @click.prevent="toggleClass">
+      <button class="ver absolute m-2" @click.prevent="toggleClass">
         <img
-          class="object-cover h-10 w-10 rounded-full"
+          class="object-cover h-8 w-8 rounded-full"
           src="@/assets/images/avatar.jpg"
         />
       </button>
       <ul
-        class="flex w-full mx-10 my-5 justify-around items-center text-primary rounded-full"
+        class="flex w-full ml-8 my-2 justify-around items-center text-primary text-xs md:text-lg"
         :class="[isActive ? '' : '']"
       >
         <li class="flex">
