@@ -1,31 +1,28 @@
 <template>
-  <container id="about" class="relative flex justify-center">
+  <container
+    id="about"
+    class="h-auto flex flex-col md:flex-row-reverse justify-center items-center"
+  >
     <div
-      class="relative w-screen z-10 bg-slate-400"
+      class="flex h-1/2 w-1/2 md:w-1/2 mt-10 translate-y-1/2 md:-translate-x-1/2 md:translate-y-0 justify-center items-center transition ease-in-out duration-700 z-10"
       :class="[
         isActive
-          ? '-translate-y-1 scale-50 lg:translate-y-0 lg:translate-x-2/3 lg:scale-90'
+          ? 'md:translate-x-1 md:translate-y-0 translate-y-0 scale-90'
           : '',
       ]"
-      @click.prevent="toggleClass"
     >
       <img
-        class="object-cover rounded-full translate-y-1/2 transition ease-in-out duration-700 my-10"
+        class="ab object-cover w-max-2xl rounded-full hover:scale-105 transition ease-in-out duration-700"
+        @click.prevent="toggleClass"
         src="@/assets/images/me.jpeg"
-        width="400"
-        height="400"
       />
     </div>
 
-    <!-- <div
-      class="max-w-2xl px-10 py-10 lg:pl-24 transition ease-in-out duration-700 z-0"
-      :class="[
-        isActive
-          ? ' z-20 translate-y-1/3 lg:-translate-x-1/2 lg:translate-y-0'
-          : 'opacity-0',
-      ]"
+    <div
+      class="w-5/6 md:w-1/2 -translate-y-10 transition ease-in-out duration-700 delay-75 z-10"
+      :class="[isActive ? 'visible opacity-100' : 'invisible opacity-0']"
     >
-      <p class="text-left text-md text-primary">
+      <p class="text-left text-sm md:text-xs text-primary">
         Hi! I'm Vova. I'm a developer with a serious love for filming. I've
         spent the last few years filming commercials for brands at 10+ different
         production houses and creative agencies where
@@ -52,7 +49,7 @@
         expertise in WebDev. I can confidently say that my marketing experience
         are without a doubt the most useful ones in application development.
       </p>
-    </div> -->
+    </div>
   </container>
 </template>
 <script>
