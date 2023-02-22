@@ -1,28 +1,18 @@
 <template>
   <container
     id="about"
-    class="h-auto flex flex-col md:flex-row-reverse justify-center items-center"
+    class="h-screen flex flex-col-reverse md:flex-row justify-center md:justify-bottom lg:justify-center items-center"
   >
-    <div
-      class="flex h-1/2 w-1/2 md:w-1/2 mt-10 translate-y-1/2 md:-translate-x-1/2 md:translate-y-0 justify-center items-center transition ease-in-out duration-700 z-10"
-      :class="[
-        isActive
-          ? 'md:translate-x-1 md:translate-y-0 translate-y-0 scale-90'
-          : '',
-      ]"
-    >
-      <img
-        class="ab object-cover w-max-2xl rounded-full hover:scale-105 transition ease-in-out duration-700"
-        @click.prevent="toggleClass"
-        src="@/assets/images/me.jpeg"
-      />
-    </div>
+    <img
+      class="hidden object-cover md:flex md:w-2/6 max-w-lg mx-4 rounded-full"
+      @click.prevent="toggleClass"
+      src="@/assets/images/me.jpeg"
+    />
 
     <div
-      class="w-5/6 md:w-1/2 -translate-y-10 transition ease-in-out duration-700 delay-75 z-10"
-      :class="[isActive ? 'visible opacity-100' : 'invisible opacity-0']"
+      class="flex items-top lg:items-center mt-4 max-w-5xl h-5/6 md:h-4/6 lg:h-screen md:max-w-2xl px-8 z-10 overflow-y-scroll"
     >
-      <p class="text-left text-sm md:text-xs text-primary">
+      <p class="text-md md:text-left md:text-base text-primary">
         Hi! I'm Vova. I'm a developer with a serious love for filming. I've
         spent the last few years filming commercials for brands at 10+ different
         production houses and creative agencies where

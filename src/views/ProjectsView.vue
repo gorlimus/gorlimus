@@ -1,8 +1,6 @@
 <template>
   <main id="projects">
-    <div
-      class="flex p-4 items-center justify-center w-full h-screen text-primary"
-    >
+    <div class="flex h-screen items-center justify-center w-full text-primary">
       <button
         :class="[isActive ? 'off' : 'z-10 ver']"
         @click.prevent="toggleClass"
@@ -11,73 +9,55 @@
       </button>
       <div
         :class="[isActive ? 'opacity' : ' scale-75 opacity-0 z-0']"
-        class="flex flex-col lg:flex-row w-auto h-auto py-12 justify-around gap-10 transition ease-in-out duration-700"
+        class="flex flex-col lg:flex-row w-5/6 h-5/6 hover:snap-x"
       >
-        <div
-          class="project-gre md:max-w-2xl lg:max-w-lg flex flex-col justify-around items-center rounded-3xl bg-gradient-to-b from-slate-700"
-        >
-          <h3
-            class="p-4 sm:p-4 md:p-2 lg:p-4 text-3xl sm:text-xl md:text-2xl lg:text-3xl text-center text-greAcc"
-          >
-            Music Project
-          </h3>
-          <p class="px-10 text-md sm:text-sm md:text-lg lg:text-md">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error
-            alias, possimus eos perspiciatis praesentium maiores necessitatibus
-            illo quis deserunt nisi cumque nesciunt repudiandae, iure totam
-            ullam maxime, reiciendis corporis nemo. Saepe consequuntur quos
-            aspernatur autem esse mollitia eius? Et corrupti quisquam nobis ut
-            vel similique quam earum sapiente cumque repellendus, unde aperiam
-            assumenda quasi laborum illum exercitationem. Reiciendis, distinctio
-            sed?
-          </p>
-
-          <ul
-            class="grid object-left-bottom py-4 gap-y-4 gap-x-14 sm:gap-x-12 grid-cols-3 sm:grid-cols-6 sm:grid-rows-1 lg:grid-cols-3"
-          >
-            <i class=""><icon-vue /></i>
-            <i class=""><icon-tailwind /></i>
-            <i class=""><icon-firebase /></i>
-            <i class=""><icon-vite /></i>
-            <i class=""><icon-vercel /></i>
-            <i class=""><icon-pinia /></i>
-          </ul>
-        </div>
-        <!-- <div
-          class="project-yel md:max-w-2xl lg:max-w-md flex flex-col justify-around items-center rounded-3xl bg-gradient-to-b from-slate-700"
-        >
-          <h3
-            class="p-4 sm:p-4 md:p-2 lg:p-6 text-3xl sm:text-xl md:text-2xl lg:text-3xl text-center text-yelAcc"
-          >
-            YelpCamp Project
-          </h3>
-          <p class="px-10 text-md sm:text-sm md:text-lg lg:text-md">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error
-            alias, possimus eos perspiciatis praesentium maiores necessitatibus
-            illo quis deserunt nisi cumque nesciunt repudiandae, iure totam
-            ullam maxime, reiciendis corporis nemo. Saepe consequuntur quos
-            aspernatur autem esse mollitia eius? Et corrupti quisquam nobis ut
-            vel similique quam earum sapiente cumque repellendus, unde aperiam
-            assumenda quasi laborum illum exercitationem. Reiciendis, distinctio
-            sed?
-          </p>
-          <ul
-            class="grid object-left-bottom py-4 gap-y-4 gap-x-14 sm:gap-x-12 grid-cols-3 sm:grid-cols-6 sm:grid-rows-1 lg:grid-cols-3"
-          >
-            <i class=""><icon-html /></i>
-            <i class=""><icon-css /></i>
-            <i class=""><icon-js /></i>
-            <i class=""><icon-node /></i>
-            <i class=""><icon-mongo /></i>
-            <i class=""><icon-git /></i>
-          </ul>
-        </div> -->
+        <ItemProject>
+          <template #title>Music Project</template>
+          <template #description>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
+            dicta quam magnam facere quas! Aut doloribus dignissimos aperiam,
+            nam, neque asperiores aliquid, facere quia illo voluptatibus qui
+            facilis! Error doloribus quas commodi saepe eum molestiae officia
+            adipisci voluptate, excepturi nisi fugiat nihil, numquam quod nemo
+            quos eaque id amet laudantium sit vero suscipit repellat mollitia.
+            Voluptates, sequi voluptatum.
+          </template>
+          <template #icon>
+            <icon-vue />
+            <icon-tailwind />
+            <icon-pinia />
+            <icon-firebase />
+            <icon-vite />
+            <icon-vercel />
+          </template>
+        </ItemProject>
+        <ItemProject>
+          <template #title>YelpCamp Project</template>
+          <template #description>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
+            laboriosam praesentium dicta quam magnam facere quas! Aut doloribus
+            dignissimos aperiam, nam, neque asperiores aliquid, facere quia illo
+            voluptatibus qui facilis! Error doloribus quas commodi saepe eum
+            molestiae officia adipisci voluptate, excepturi nisi fugiat nihil,
+            numquam quod nemo quos eaque id amet laudantium sit vero suscipit
+            repellat mollitia. Voluptates, sequi voluptatum.
+          </template>
+          <template #icon>
+            <icon-html />
+            <icon-css />
+            <icon-js />
+            <icon-mongo />
+            <icon-node />
+            <icon-git />
+          </template>
+        </ItemProject>
       </div>
     </div>
   </main>
 </template>
 
 <script>
+import ItemProject from "@/components/ItemProject.vue";
 import IconHtml from "@/assets/icons/IconHtml.vue";
 import IconCss from "@/assets/icons/IconCss.vue";
 import IconJs from "@/assets/icons/IconJS.vue";
@@ -97,6 +77,7 @@ export default {
     return { isActive: false };
   },
   components: {
+    ItemProject,
     IconHtml,
     IconCss,
     IconJs,
