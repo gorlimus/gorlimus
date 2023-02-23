@@ -5,14 +5,17 @@
       <component :is="Component"></component>
     </transition>
   </router-view>
+  <app-footer />
 </template>
 <script>
 import AppHeader from "@/components/AppHeader.vue";
+import AppFooter from "@/components/AppFooter.vue";
 
 export default {
   name: "app",
   components: {
     AppHeader,
+    AppFooter,
   },
   methods: {
     toggleClass() {

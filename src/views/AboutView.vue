@@ -1,7 +1,7 @@
 <template>
   <container
     id="about"
-    class="h-screen py-10 md:py-0 flex flex-col-reverse md:flex-row justify-center md:justify-bottom lg:justify-center items-center"
+    class="h-screen py-10 md:py-0 flex md:flex-row justify-center md:justify-bottom lg:justify-center items-center"
   >
     <img
       class="hidden object-cover md:flex md:w-2/6 max-w-lg mx-4 rounded-full"
@@ -10,7 +10,7 @@
     />
 
     <div
-      class="flex md:items-start mt-4 max-w-5xl md:h-4/6 md:max-w-2xl px-8 z-10 overflow-y-scroll"
+      class="flex flex-col pt-20 h-screen max-h-fit md:w-1/2 lg:justify-center md:pt-10 md:items-start lg:items-center px-8 z-10 overflow-y-scroll"
     >
       <p class="text-md md:text-left md:text-base text-primary">
         Hi! I'm Vova. I'm a developer with a serious love for filming. I've
@@ -38,13 +38,14 @@
         audience in my commercials, and I'm really excited to finally apply my
         expertise in WebDev. I can confidently say that my marketing experience
         are without a doubt the most useful ones in application development.
-        <router-link
-          class="bg-greAcc rounded-lg text-primary bg-opacity-0 hover:bg-opacity-50 transition-all duration-300 text-sm ring-secondary ring-1"
-          :to="{ name: 'projects' }"
-        >
-          go to projects
-        </router-link>
       </p>
+
+      <router-link
+        class="my-10 bg-greAcc w-fit self-center rounded-lg text-primary bg-opacity-0 hover:bg-opacity-50 transition-all duration-300 text-sm ring-secondary ring-1"
+        :to="{ name: 'projects' }"
+      >
+        go to projects
+      </router-link>
     </div>
   </container>
 </template>
