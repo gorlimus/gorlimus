@@ -1,18 +1,18 @@
 <template>
   <header
-    class="fixed flex w-full font-thin bg-transparent z-50"
+    class="fixed flex w-full font-thin bg-gray-800 z-50"
     :class="[isActive ? 'w-fit' : 'w-full']"
   >
     <nav class="flex w-full justify-between">
-      <button class="ver absolute m-2" @click.prevent="toggleClass">
+      <button class="absolute m-2" @click.prevent="toggleClass">
         <img
-          class="object-cover h-8 w-8 rounded-full"
+          class="object-cover h-8 w-8 md:h-12 md:w-12 rounded-full hover:ring-2 ring-secondary transition-all duration-300"
+          :class="[isActive ? 'ring-2' : '']"
           src="@/assets/images/avatar.jpg"
         />
       </button>
       <ul
         class="flex w-full ml-8 my-2 justify-around items-center text-primary text-xs md:text-lg"
-        :class="[isActive ? '' : '']"
       >
         <li class="flex">
           <router-link
@@ -53,7 +53,7 @@
 <script>
 export default {
   name: "AppHeader",
-  data: function () {
+  data() {
     return { isActive: false };
   },
   methods: {

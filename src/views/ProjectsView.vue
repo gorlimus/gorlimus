@@ -7,9 +7,10 @@
       >
         <h2 class="text-6xl">projects</h2>
       </button>
+
       <div
         :class="[isActive ? 'opacity' : ' scale-75 opacity-0 z-0']"
-        class="flex flex-col lg:flex-row w-5/6 h-5/6 hover:snap-x"
+        class="flex py-10 flex-col h-screen justify-between items-center lg:justify-center lg:flex-row w-full max-h-fit overflow-y-auto transition-all duration-300 ease-linear"
       >
         <ItemProject>
           <template #title>Music Project</template>
@@ -21,6 +22,12 @@
             adipisci voluptate, excepturi nisi fugiat nihil, numquam quod nemo
             quos eaque id amet laudantium sit vero suscipit repellat mollitia.
             Voluptates, sequi voluptatum.
+            <a
+              class="bg-greAcc rounded-lg text-primary bg-opacity-0 hover:bg-opacity-50 transition-all duration-300 text-sm ring-secondary ring-1"
+              href="#"
+            >
+              GitHub
+            </a>
           </template>
           <template #icon>
             <icon-vue />
@@ -41,7 +48,13 @@
             molestiae officia adipisci voluptate, excepturi nisi fugiat nihil,
             numquam quod nemo quos eaque id amet laudantium sit vero suscipit
             repellat mollitia. Voluptates, sequi voluptatum.
+            <a
+              class="bg-greAcc rounded-lg text-primary bg-opacity-0 hover:bg-opacity-50 transition-all duration-300 text-sm ring-secondary ring-1"
+              href="#"
+              >GitHub</a
+            >
           </template>
+
           <template #icon>
             <icon-html />
             <icon-css />

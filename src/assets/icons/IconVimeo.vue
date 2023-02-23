@@ -1,5 +1,6 @@
 <template>
   <svg
+    class="hover:fill-secondary hover:scale-105 transition-all duration-300"
     fill="#81b29a"
     height="50"
     width="50"
