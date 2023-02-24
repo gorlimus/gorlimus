@@ -63,20 +63,21 @@ li a:hover::before {
 
 .project-gre,
 .project-yel {
+  transition-delay: 1000ms;
   transform: scale(0.9);
   transition: all 0.7s ease;
 }
 
 .project-gre:hover {
+  transition-delay: 1000ms;
   box-shadow: 0 10px 15px -3px #81b29a80;
   background-color: #81b29a10;
-  transform: scale(0.95);
   transition: all 0.7s ease;
 }
 .project-yel:hover {
+  transition-delay: 500ms;
   box-shadow: 0 10px 15px -3px #f2cc8f80;
   background-color: #f2cc8f10;
-  transform: scale(1);
   transition: all 0.7s ease;
 }
 
@@ -92,4 +93,12 @@ li a:hover::before {
 
 span {
   color: #e07a5f;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }

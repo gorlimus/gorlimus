@@ -1,60 +1,44 @@
 <template>
   <div
     id="projects"
-    class="flex h-screen items-center justify-center text-primary"
+    class="flex h-screen flex-col items-center justify-center text-primary bg-green-900"
   >
     <button
-      :class="[isActive ? 'off' : 'z-10 ver']"
+      class="absolute"
+      :class="[isActive ? 'off z-0' : 'ver']"
       @click.prevent="toggleClass"
     >
       <h2 class="text-6xl">projects</h2>
     </button>
 
     <div
-      :class="[isActive ? 'opacity' : ' scale-75 opacity-0 z-0']"
-      class="flex py-10 flex-col h-screen justify-between items-center lg:justify-center lg:flex-row w-full max-h-fit overflow-y-auto transition-all duration-300 ease-linear"
+      class="flex w-screen h-3/4 md:h-5/6 items-center snap-x overflow-scroll overscroll-contain snap-mandatory z-0 transition-all duration-700 scrollbar-hide bg-yellow-800"
+      :class="[isActive ? 'opacity-100' : 'invisible z-0 scale-75  opacity-0']"
     >
       <ItemProject>
-        <template #title>Music Project</template>
-        <template #description>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
-          dicta quam magnam facere quas! Aut doloribus dignissimos aperiam, nam,
-          neque asperiores aliquid, facere quia illo voluptatibus qui facilis!
-          Error doloribus quas commodi saepe eum molestiae officia adipisci
-          voluptate, excepturi nisi fugiat nihil, numquam quod nemo quos eaque
-          id amet laudantium sit vero suscipit repellat mollitia. Voluptates,
-          sequi voluptatum.
+        <template #title
+          >YelpCamp Project
           <a
-            class="bg-greAcc rounded-lg text-primary bg-opacity-0 hover:bg-opacity-50 transition-all duration-300 text-sm ring-secondary ring-1"
-            href="#"
-          >
-            GitHub
-          </a>
-        </template>
-        <template #icon>
-          <icon-vue />
-          <icon-tailwind />
-          <icon-pinia />
-          <icon-firebase />
-          <icon-vite />
-          <icon-vercel />
-        </template>
-      </ItemProject>
-      <ItemProject>
-        <template #title>YelpCamp Project</template>
-        <template #description>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
-          laboriosam praesentium dicta quam magnam facere quas! Aut doloribus
-          dignissimos aperiam, nam, neque asperiores aliquid, facere quia illo
-          voluptatibus qui facilis! Error doloribus quas commodi saepe eum
-          molestiae officia adipisci voluptate, excepturi nisi fugiat nihil,
-          numquam quod nemo quos eaque id amet laudantium sit vero suscipit
-          repellat mollitia. Voluptates, sequi voluptatum.
-          <a
-            class="bg-greAcc rounded-lg text-primary bg-opacity-0 hover:bg-opacity-50 transition-all duration-300 text-sm ring-secondary ring-1"
+            class="bg-greAcc rounded-lg text-primary bg-opacity-0 hover:bg-opacity-50 transition-all duration-300 text-sm font-thin ring-secondary ring-1"
             href="#"
             >GitHub</a
           >
+        </template>
+        <template #description>
+          I developed simple WebApp, where you can login/register and get/post
+          info about places for camping. <br />
+          For frontend I used <span>EJS</span> and <span>Bootstrap</span>.
+          <br />
+          For backend I used <span>NODE</span> with a lot of
+          <span>NPM</span> packages such as <span>express</span> as main
+          framework, <span>express-session</span> for state management,
+          <span>connect-flash</span> for messages connected with session,
+          <span>PASSPORT</span> for authentication/authorization,
+          <span>helmet</span> to secure my app by setting various headers and a
+          few more.
+          <br />
+          As DataBase I used <span>mongo DB</span>. and <span>Git</span> and
+          <span>GitHub</span> as VCS. <br />
         </template>
 
         <template #icon>
@@ -67,27 +51,47 @@
         </template>
       </ItemProject>
       <ItemProject>
-        <template #title>Personal Web</template>
-        <template #description>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
-          cupiditate tempora, aspernatur adipisci cumque facere nesciunt maxime
-          itaque nihil possimus harum ea reiciendis excepturi voluptatibus
-          eveniet eligendi sapiente est dignissimos. Quos, non! Rerum
-          perspiciatis ab dolor maiores. Culpa quisquam autem saepe quibusdam,
-          nulla nisi iste totam cupiditate, dicta esse quasi facilis dolorum
-          pariatur, mollitia accusantium dolor recusandae illum explicabo!
-          Rerum.
+        <template #title
+          >Music Project
           <a
-            class="bg-greAcc rounded-lg text-primary bg-opacity-0 hover:bg-opacity-50 transition-all duration-300 text-sm ring-secondary ring-1"
+            class="bg-greAcc rounded-lg text-primary bg-opacity-0 hover:bg-opacity-50 transition-all duration-300 text-sm font-thin ring-secondary ring-1"
             href="#"
             >GitHub</a
           >
         </template>
+        <template #description>
+          I developed a simple music player with Vue.
+        </template>
+
+        <template #icon>
+          <icon-vue />
+          <icon-tailwind />
+          <icon-pinia />
+          <icon-firebase />
+          <icon-vite />
+          <icon-vercel />
+        </template>
+      </ItemProject>
+      <ItemProject>
+        <template #title
+          >Personal SPA
+          <a
+            class="bg-greAcc rounded-lg text-primary bg-opacity-0 hover:bg-opacity-50 transition-all duration-300 text-sm font-thin ring-secondary ring-1"
+            href="#"
+            >GitHub</a
+          >
+        </template>
+        <template #description>
+          I developed simple single page application as a portfolio site.
+        </template>
 
         <template #icon>
           <icon-html />
-          <icon-tailwind />
-          <icon-vue />
+          <icon-css />
+          <icon-js />
+          <icon-mongo />
+          <icon-node />
+          <icon-git />
         </template>
       </ItemProject>
     </div>
@@ -96,6 +100,7 @@
 
 <script>
 import ItemProject from "@/components/ItemProject.vue";
+import ItemTest from "@/components/ItemTest.vue";
 import IconHtml from "@/assets/icons/IconHtml.vue";
 import IconCss from "@/assets/icons/IconCss.vue";
 import IconJs from "@/assets/icons/IconJS.vue";
@@ -116,6 +121,7 @@ export default {
   },
   components: {
     ItemProject,
+    ItemTest,
     IconHtml,
     IconCss,
     IconJs,

@@ -1,6 +1,6 @@
 <template>
   <header
-    class="fixed h-28 flex w-full items-start font-thin bg-gradient-to-b from-slate-800 z-50"
+    class="fixed h-28 md:h-10 flex w-full items-start font-thin bg-gradient-to-b from-slate-800 z-50"
     :class="[isActive ? 'w-fit' : 'w-full']"
   >
     <nav class="flex w-full justify-between">

@@ -2,8 +2,8 @@
   <svg
     class="hover:fill-secondary hover:scale-105 transition-all duration-300"
     fill="#81b29a"
-    height="50"
-    width="50"
+    width="40"
+    height="40"
     version="1.1"
     id="Layer_1"
     xmlns="http://www.w3.org/2000/svg"
