@@ -1,18 +1,14 @@
 <template>
   <div
     id="projects"
-    class="flex h-screen flex-col items-center justify-center text-primary bg-green-900"
+    class="flex h-screen items-center justify-center text-primary snap-center"
   >
-    <button
-      class="absolute"
-      :class="[isActive ? 'off z-0' : 'ver']"
-      @click.prevent="toggleClass"
-    >
+    <button :class="[isActive ? 'off z-0' : '']" @click.prevent="toggleClass">
       <h2 class="text-6xl">projects</h2>
     </button>
 
     <div
-      class="flex w-screen h-3/4 md:h-5/6 items-center snap-x overflow-scroll overscroll-contain snap-mandatory z-0 transition-all duration-700 scrollbar-hide bg-yellow-800"
+      class="flex flex-col max-w-3xl lg:max-w-md h-screen items-start snap-y overflow-scroll overscroll-contain snap-mandatory z-0 transition-all duration-700 scrollbar-hide"
       :class="[isActive ? 'opacity-100' : 'invisible z-0 scale-75  opacity-0']"
     >
       <ItemProject>
@@ -41,12 +37,14 @@
           <span>GitHub</span> as VCS. <br />
         </template>
 
-        <template #icon>
+        <template #first-row>
           <icon-html />
           <icon-css />
           <icon-js />
-          <icon-mongo />
+        </template>
+        <template #second-row>
           <icon-node />
+          <icon-mongo />
           <icon-git />
         </template>
       </ItemProject>
@@ -63,12 +61,14 @@
           I developed a simple music player with Vue.
         </template>
 
-        <template #icon>
+        <template #first-row>
           <icon-vue />
           <icon-tailwind />
           <icon-pinia />
-          <icon-firebase />
+        </template>
+        <template #second-row>
           <icon-vite />
+          <icon-firebase />
           <icon-vercel />
         </template>
       </ItemProject>
@@ -85,13 +85,10 @@
           I developed simple single page application as a portfolio site.
         </template>
 
-        <template #icon>
+        <template #first-row>
           <icon-html />
           <icon-css />
           <icon-js />
-          <icon-mongo />
-          <icon-node />
-          <icon-git />
         </template>
       </ItemProject>
     </div>

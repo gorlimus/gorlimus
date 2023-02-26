@@ -1,6 +1,8 @@
 <template>
   <main id="contacts">
-    <div class="flex py-10 flex-col h-screen justify-between items-center">
+    <div
+      class="flex py-10 flex-col h-screen justify-between items-center snap-center"
+    >
       <span class=""></span>
       <h2 class="text-4xl tracking-tight text-primary text-center">
         thank you and good luck

@@ -43,12 +43,10 @@ li a:hover::before {
 }
 
 .ver {
-  position: absolute;
   transition: all 0.7s ease;
 }
 
 .off {
-  position: absolute;
   text-shadow: 0em -10em #81b29a, 0em 10em #f2cc8f;
   filter: blur(4px);
   opacity: 15%;
@@ -79,16 +77,6 @@ li a:hover::before {
   box-shadow: 0 10px 15px -3px #f2cc8f80;
   background-color: #f2cc8f10;
   transition: all 0.7s ease;
-}
-
-.ab {
-  transition: all 0.3s linear;
-}
-
-.ab:hover {
-  box-shadow: 0 10px 15px -3px #81b29a80;
-  transform: scale(0.9);
-  transition: all 0.3s linear;
 }
 
 span {

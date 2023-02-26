@@ -1,11 +1,10 @@
 <template>
   <container
     id="about"
-    class="h-screen py-10 md:py-0 flex md:flex-row justify-center md:justify-bottom lg:justify-center items-center"
+    class="h-screen py-10 md:py-0 flex md:flex-row justify-center md:justify-bottom lg:justify-center items-center snap-center"
   >
     <img
       class="hidden object-cover md:flex md:w-2/6 max-w-lg mx-4 rounded-full"
-      @click.prevent="toggleClass"
       src="@/assets/images/me.jpeg"
     />
 
@@ -39,26 +38,11 @@
         expertise in WebDev. I can confidently say that my marketing experience
         are without a doubt the most useful ones in application development.
       </p>
-
-      <router-link
-        class="my-10 bg-greAcc w-fit self-center rounded-lg text-primary bg-opacity-0 hover:bg-opacity-50 transition-all duration-300 text-sm ring-secondary ring-1"
-        :to="{ name: 'projects' }"
-      >
-        go to projects
-      </router-link>
     </div>
   </container>
 </template>
 <script>
 export default {
   name: "AboutView",
-  data: function () {
-    return { isActive: false };
-  },
-  methods: {
-    toggleClass() {
-      this.isActive = !this.isActive;
-    },
-  },
 };
 </script>
