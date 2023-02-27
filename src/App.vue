@@ -14,11 +14,11 @@
 </template>
 <script>
 import AppHeader from "@/components/AppHeader.vue";
+import AppFooter from "@/components/AppFooter.vue";
 import HomeView from "@/views/HomeView.vue";
 import AboutView from "@/views/AboutView.vue";
 import ProjectsView from "@/views/ProjectsView.vue";
 import ContactsView from "@/views/ContactsView.vue";
-import AppFooter from "@/components/AppFooter.vue";
 
 export default {
   name: "app",
@@ -41,7 +41,6 @@ export default {
       const page = Math.round(
         scroller.scrollTop / scroller.getBoundingClientRect().height
       );
-      console.log(page);
       if (page === 0) {
         this.activeLink = "home";
       }

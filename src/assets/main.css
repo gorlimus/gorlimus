@@ -23,7 +23,7 @@ a {
   padding: 4px;
 }
 
-li a::before {
+li button::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -37,16 +37,18 @@ li a::before {
   transition: transform 0.2s ease-in-out;
 }
 
-li a:hover::before {
+li button:hover::before {
   transform-origin: left;
   transform: scaleX(1);
 }
 
 .ver {
   transition: all 0.7s ease;
+  position: absolute;
 }
 
 .off {
+  position: absolute;
   text-shadow: 0em -10em #81b29a, 0em 10em #f2cc8f;
   filter: blur(4px);
   opacity: 15%;

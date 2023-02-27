@@ -1,25 +1,47 @@
 <template>
   <div
     id="projects"
-    class="flex h-screen items-center justify-center text-primary snap-center"
+    class="relative flex h-screen items-center justify-center text-primary snap-center"
   >
-    <button :class="[isActive ? 'off z-0' : '']" @click.prevent="toggleClass">
-      <h2 class="text-6xl">projects</h2>
-    </button>
-
     <div
-      class="flex flex-col max-w-3xl lg:max-w-md h-screen items-start snap-y overflow-scroll overscroll-contain snap-mandatory z-0 transition-all duration-700 scrollbar-hide"
-      :class="[isActive ? 'opacity-100' : 'invisible z-0 scale-75  opacity-0']"
+      class="flex justify-between max-w-3xl lg:max-w-md h-screen items-center snap-x snap-mandatory snap-always overflow-x-scroll transition-all duration-300 scrollbar-hide"
     >
       <ItemProject>
-        <template #title
-          >YelpCamp Project
-          <a
-            class="bg-greAcc rounded-lg text-primary bg-opacity-0 hover:bg-opacity-50 transition-all duration-300 text-sm font-thin ring-secondary ring-1"
-            href="#"
-            >GitHub</a
-          >
+        <template #title>Music Project </template>
+        <template #description>
+          I developed simple WebApp, where you can login/register and get/post
+          info about places for camping. <br />
+          For frontend I used <span>EJS</span> and <span>Bootstrap</span>.
+          <br />
+          For backend I used <span>NODE</span> with a lot of
+          <span>NPM</span> packages such as <span>express</span> as main
+          framework, <span>express-session</span> for state management,
+          <span>connect-flash</span> for messages connected with session,
+          <span>PASSPORT</span> for authentication/authorization,
+          <span>helmet</span> to secure my app by setting various headers and a
+          few more.
+          <br />
+          As DataBase I used <span>mongo DB</span>. and <span>Git</span> and
+          <span>GitHub</span> as VCS. <br />
         </template>
+
+        <template #first-row>
+          <icon-vue />
+          <icon-tailwind />
+          <icon-pinia />
+        </template>
+        <template #second-row>
+          <icon-vite />
+          <icon-firebase />
+          <icon-vercel />
+        </template>
+        <template #gitLink>
+          <a href="https://github.com/gorlimus/music">GitHub</a></template
+        >
+        <template #vercelLink> <a href="#">demo</a></template>
+      </ItemProject>
+      <ItemProject>
+        <template #title>YelpCamp Project </template>
         <template #description>
           I developed simple WebApp, where you can login/register and get/post
           info about places for camping. <br />
@@ -47,42 +69,28 @@
           <icon-mongo />
           <icon-git />
         </template>
+        <template #gitLink>
+          <a href="https://github.com/gorlimus/Camp">GitHub</a></template
+        >
+        <template #vercelLink> <a href="#">demo</a></template>
       </ItemProject>
       <ItemProject>
-        <template #title
-          >Music Project
-          <a
-            class="bg-greAcc rounded-lg text-primary bg-opacity-0 hover:bg-opacity-50 transition-all duration-300 text-sm font-thin ring-secondary ring-1"
-            href="#"
-            >GitHub</a
-          >
-        </template>
+        <template #title>Personal SPA </template>
         <template #description>
-          I developed a simple music player with Vue.
-        </template>
-
-        <template #first-row>
-          <icon-vue />
-          <icon-tailwind />
-          <icon-pinia />
-        </template>
-        <template #second-row>
-          <icon-vite />
-          <icon-firebase />
-          <icon-vercel />
-        </template>
-      </ItemProject>
-      <ItemProject>
-        <template #title
-          >Personal SPA
-          <a
-            class="bg-greAcc rounded-lg text-primary bg-opacity-0 hover:bg-opacity-50 transition-all duration-300 text-sm font-thin ring-secondary ring-1"
-            href="#"
-            >GitHub</a
-          >
-        </template>
-        <template #description>
-          I developed simple single page application as a portfolio site.
+          I developed simple WebApp, where you can login/register and get/post
+          info about places for camping. <br />
+          For frontend I used <span>EJS</span> and <span>Bootstrap</span>.
+          <br />
+          For backend I used <span>NODE</span> with a lot of
+          <span>NPM</span> packages such as <span>express</span> as main
+          framework, <span>express-session</span> for state management,
+          <span>connect-flash</span> for messages connected with session,
+          <span>PASSPORT</span> for authentication/authorization,
+          <span>helmet</span> to secure my app by setting various headers and a
+          few more.
+          <br />
+          As DataBase I used <span>mongo DB</span>. and <span>Git</span> and
+          <span>GitHub</span> as VCS. <br />
         </template>
 
         <template #first-row>
@@ -90,6 +98,8 @@
           <icon-css />
           <icon-js />
         </template>
+        <template #gitLink> <a href="#">GitHub</a></template>
+        <template #vercelLink> <a href="#">demo</a></template>
       </ItemProject>
     </div>
   </div>
@@ -97,7 +107,7 @@
 
 <script>
 import ItemProject from "@/components/ItemProject.vue";
-import ItemTest from "@/components/ItemTest.vue";
+
 import IconHtml from "@/assets/icons/IconHtml.vue";
 import IconCss from "@/assets/icons/IconCss.vue";
 import IconJs from "@/assets/icons/IconJS.vue";
@@ -113,12 +123,11 @@ import IconPinia from "@/assets/icons/IconPinia.vue";
 
 export default {
   name: "ProjectsView",
-  data: function () {
+  data() {
     return { isActive: false };
   },
   components: {
     ItemProject,
-    ItemTest,
     IconHtml,
     IconCss,
     IconJs,

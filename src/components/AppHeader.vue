@@ -13,11 +13,6 @@
     </button>
     <nav
       class="flex w-full justify-between transition ease-in-out duration-500 -z-10"
-      :class="[
-        isActive
-          ? 'transition ease-in-out duration-300 text-secondary translate-y-1 opacity-100'
-          : '-translate-y-12 opacity-0 ',
-      ]"
     >
       <ul
         class="flex w-full ml-8 my-2 justify-around items-center text-primary text-xs md:text-lg"
@@ -25,7 +20,12 @@
         <li class="flex">
           <button
             class="transition ease-in-out duration-500"
-            :class="[activeLink === 'home' ? 'bg-green-500' : '']"
+            :class="[
+              activeLink === 'home'
+                ? 'text-secondary translate-y-2 opacity-100'
+                : '',
+              isActive ? '' : '-translate-y-1 opacity-0',
+            ]"
             @click.prevent="scroll('home')"
           >
             home
@@ -34,7 +34,12 @@
         <li class="flex">
           <button
             class="transition ease-in-out duration-500 delay-100"
-            :class="[activeLink === 'about' ? 'bg-green-500' : '']"
+            :class="[
+              activeLink === 'about'
+                ? 'text-secondary translate-y-2 opacity-100'
+                : '',
+              isActive ? '' : '-translate-y-1 opacity-0',
+            ]"
             @click.prevent="scroll('about')"
           >
             about
@@ -43,7 +48,12 @@
         <li class="flex">
           <button
             class="transition ease-in-out duration-500 delay-200"
-            :class="[activeLink === 'projects' ? 'bg-green-500' : '']"
+            :class="[
+              activeLink === 'projects'
+                ? 'text-secondary translate-y-2 opacity-100'
+                : '',
+              isActive ? '' : '-translate-y-1 opacity-0',
+            ]"
             @click.prevent="scroll('projects')"
           >
             projects
@@ -52,7 +62,12 @@
         <li class="flex">
           <button
             class="transition ease-in-out duration-500 delay-300"
-            :class="[activeLink === 'contacts' ? 'bg-green-500' : '']"
+            :class="[
+              activeLink === 'contacts'
+                ? 'text-secondary translate-y-1 opacity-100'
+                : '',
+              isActive ? '' : '-translate-y-1 opacity-0',
+            ]"
             @click.prevent="scroll('contacts')"
           >
             Contacts
@@ -74,7 +89,6 @@ export default {
   methods: {
     toggleClass() {
       this.isActive = !this.isActive;
-      console.log(this.activeLink);
     },
     scroll(refName) {
       const element = document.getElementById(refName);
