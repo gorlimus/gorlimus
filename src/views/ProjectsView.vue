@@ -43,8 +43,8 @@
       <ItemProject>
         <template #title>YelpCamp Project </template>
         <template #description>
-          Some changes where you can login/register and get/post info about
-          places for camping. <br />
+          I developed simple WebApp, where you can login/register and get/post
+          info about places for camping. <br />
           For frontend I used <span>EJS</span> and <span>Bootstrap</span>.
           <br />
           For backend I used <span>NODE</span> with a lot of
