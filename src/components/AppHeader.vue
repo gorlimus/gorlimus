@@ -1,7 +1,7 @@
 <template>
   <header
     id="header"
-    class="fixed h-28 md:h-10 flex w-full items-start font-thin bg-gradient-to-b from-slate-800 z-50"
+    class="fixed h-20 md:h-10 flex w-full items-start font-thin bg-gradient-to-b from-slate-800 z-50"
     :class="[isActive ? 'w-fit' : 'w-full']"
   >
     <button class="absolute m-2" @click.prevent="toggleClass">
@@ -22,9 +22,9 @@
             class="transition ease-in-out duration-500"
             :class="[
               activeLink === 'home'
-                ? 'text-secondary translate-y-2 opacity-100'
+                ? 'text-secondary translate-y-3 opacity-100'
                 : '',
-              isActive ? '' : '-translate-y-1 opacity-0',
+              isActive ? '' : '-translate-y-8 opacity-0',
             ]"
             @click.prevent="scroll('home')"
           >
@@ -36,9 +36,9 @@
             class="transition ease-in-out duration-500 delay-100"
             :class="[
               activeLink === 'about'
-                ? 'text-secondary translate-y-2 opacity-100'
+                ? 'text-secondary translate-y-3 opacity-100'
                 : '',
-              isActive ? '' : '-translate-y-1 opacity-0',
+              isActive ? '' : '-translate-y-8 opacity-0',
             ]"
             @click.prevent="scroll('about')"
           >
@@ -50,9 +50,9 @@
             class="transition ease-in-out duration-500 delay-200"
             :class="[
               activeLink === 'projects'
-                ? 'text-secondary translate-y-2 opacity-100'
+                ? 'text-secondary translate-y-3 opacity-100'
                 : '',
-              isActive ? '' : '-translate-y-1 opacity-0',
+              isActive ? '' : '-translate-y-8 opacity-0',
             ]"
             @click.prevent="scroll('projects')"
           >
@@ -64,9 +64,9 @@
             class="transition ease-in-out duration-500 delay-300"
             :class="[
               activeLink === 'contacts'
-                ? 'text-secondary translate-y-1 opacity-100'
+                ? 'text-secondary translate-y-3 opacity-100'
                 : '',
-              isActive ? '' : '-translate-y-1 opacity-0',
+              isActive ? '' : '-translate-y-8 opacity-0',
             ]"
             @click.prevent="scroll('contacts')"
           >

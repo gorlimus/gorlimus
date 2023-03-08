@@ -4,25 +4,20 @@
     class="relative flex h-screen items-center justify-center text-primary snap-center"
   >
     <div
-      class="flex justify-between max-w-3xl lg:max-w-md h-screen items-center snap-x snap-mandatory snap-always overflow-x-scroll transition-all duration-300 scrollbar-hide"
+      class="flex flex-col h-screen lg:h-5/6 lg:flex-row justify-between items-center overflow-y-scroll overflow-auto transition-all duration-300 scrollbar-hide lg:py-0"
     >
       <ItemProject>
-        <template #title>Music Project </template>
+        <template #title>My Music</template>
         <template #description>
-          I developed simple WebApp, where you can login/register and get/post
-          info about places for camping. <br />
-          For frontend I used <span>EJS</span> and <span>Bootstrap</span>.
+          This a simple WebApp, where you can login/register and
+          get/post/edit/delete information about places for camping. Also you
+          can upload images, leave comments and ratings. <br />
           <br />
-          For backend I used <span>NODE</span> with a lot of
-          <span>NPM</span> packages such as <span>express</span> as main
-          framework, <span>express-session</span> for state management,
-          <span>connect-flash</span> for messages connected with session,
-          <span>PASSPORT</span> for authentication/authorization,
-          <span>helmet</span> to secure my app by setting various headers and a
-          few more.
+          All data is stored in MongoDB and everything is connected with help of
+          express. I used different NPM modules for state management,
+          authentication / authorization, basic security.
+
           <br />
-          As DataBase I used <span>mongo DB</span>. and <span>Git</span> and
-          <span>GitHub</span> as VCS. <br />
         </template>
 
         <template #first-row>
@@ -38,10 +33,12 @@
         <template #gitLink>
           <a href="https://github.com/gorlimus/music">GitHub</a></template
         >
-        <template #vercelLink> <a href="#">demo</a></template>
+        <template #vercelLink>
+          <a href="https://music-seven-rosy.vercel.app/">demo</a></template
+        >
       </ItemProject>
       <ItemProject>
-        <template #title>YelpCamp Project </template>
+        <template #title>My Camp</template>
         <template #description>
           I developed simple WebApp, where you can login/register and get/post
           info about places for camping. <br />
@@ -74,33 +71,6 @@
         >
         <template #vercelLink> <a href="#">demo</a></template>
       </ItemProject>
-      <ItemProject>
-        <template #title>Personal SPA </template>
-        <template #description>
-          I developed simple WebApp, where you can login/register and get/post
-          info about places for camping. <br />
-          For frontend I used <span>EJS</span> and <span>Bootstrap</span>.
-          <br />
-          For backend I used <span>NODE</span> with a lot of
-          <span>NPM</span> packages such as <span>express</span> as main
-          framework, <span>express-session</span> for state management,
-          <span>connect-flash</span> for messages connected with session,
-          <span>PASSPORT</span> for authentication/authorization,
-          <span>helmet</span> to secure my app by setting various headers and a
-          few more.
-          <br />
-          As DataBase I used <span>mongo DB</span>. and <span>Git</span> and
-          <span>GitHub</span> as VCS. <br />
-        </template>
-
-        <template #first-row>
-          <icon-html />
-          <icon-css />
-          <icon-js />
-        </template>
-        <template #gitLink> <a href="#">GitHub</a></template>
-        <template #vercelLink> <a href="#">demo</a></template>
-      </ItemProject>
     </div>
   </div>
 </template>
@@ -108,9 +78,9 @@
 <script>
 import ItemProject from "@/components/ItemProject.vue";
 
+import IconJs from "@/assets/icons/IconJs.vue";
 import IconHtml from "@/assets/icons/IconHtml.vue";
 import IconCss from "@/assets/icons/IconCss.vue";
-import IconJs from "@/assets/icons/IconJS.vue";
 import IconNode from "@/assets/icons/IconNode.vue";
 import IconMongo from "@/assets/icons/IconMongo.vue";
 import IconGit from "@/assets/icons/IconGit.vue";

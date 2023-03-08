@@ -9,13 +9,22 @@
       </h2>
       <div class="flex w-full justify-evenly place-items-end">
         <a href="https://github.com/gorlimus" class="hover:fill-primary">
-          <i><icon-github /></i>
+          <i
+            ><icon-github
+              class="hover:fill-secondary hover:scale-105 transition-all duration-300"
+          /></i>
         </a>
         <a href="https://www.linkedin.com/in/gorlimus/">
-          <i><icon-linkedin /></i>
+          <i
+            ><icon-linkedin
+              class="hover:fill-secondary hover:scale-105 transition-all duration-300"
+          /></i>
         </a>
         <a href="https://vimeo.com/gorlimus">
-          <i><icon-vimeo /></i>
+          <i
+            ><icon-vimeo
+              class="hover:fill-secondary hover:scale-105 transition-all duration-300"
+          /></i>
         </a>
       </div>
     </div>

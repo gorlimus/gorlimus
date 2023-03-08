@@ -11,6 +11,7 @@ module.exports = {
         greAcc: "#81B29A",
         pale: "#3D405B",
         yelAcc: "#F2CC8F",
+        vimeo: "#1ab7ea",
       },
     },
   },

@@ -1,6 +1,7 @@
 <template>
   <svg
-    class="hover:fill-secondary hover:scale-105 transition-all duration-300"
+    width="40"
+    height="40"
     fill="#81b29a"
     version="1.1"
     id="Layer_1"
@@ -8,8 +9,6 @@
     xmlns:xlink="http://www.w3.org/1999/xlink"
     viewBox="-143 145 512 512"
     xml:space="preserve"
-    width="40"
-    height="40"
   >
     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
     <g

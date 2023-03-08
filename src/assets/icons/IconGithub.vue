@@ -1,6 +1,7 @@
 <template>
   <svg
-    class="hover:fill-secondary hover:scale-105 transition-all duration-300"
+    width="40"
+    height="40"
     fill="#81b29a"
     version="1.1"
     baseProfile="tiny"
@@ -11,8 +12,6 @@
     xmlns="http://www.w3.org/2000/svg"
     xmlns:xlink="http://www.w3.org/1999/xlink"
     xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
-    width="40"
-    height="40"
     viewBox="0 0 42 42"
     xml:space="preserve"
   >
