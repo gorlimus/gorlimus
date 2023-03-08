@@ -66,7 +66,7 @@
 import IconVite from "@/assets/icons/IconVite.vue";
 import IconVue from "@/assets/icons/IconVue.vue";
 import IconVimeo from "@/assets/icons/IconVimeo.vue";
-import IconGitHub from "@/assets/icons/IconGitHub.vue";
+import IconGitHub from "@/assets/icons/IconGithub.vue";
 
 export default {
   name: "AboutView",
