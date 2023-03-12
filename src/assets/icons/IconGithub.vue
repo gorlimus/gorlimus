@@ -2,7 +2,7 @@
   <svg
     width="40"
     height="40"
-    fill="#81b29a"
+    fill="#F4F1DE"
     version="1.1"
     baseProfile="tiny"
     id="Layer_1"

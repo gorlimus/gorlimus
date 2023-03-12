@@ -1,7 +1,7 @@
 <template>
   <div
     id="home"
-    class="relative flex items-center justify-center w-full h-screen snap-center"
+    class="relative flex items-center justify-center w-full h-screen snap-center select-none"
   >
     <button
       class="absolute text-primary p-4 perspect hover:text-secondary transition-all"

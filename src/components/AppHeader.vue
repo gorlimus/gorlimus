@@ -1,7 +1,7 @@
 <template>
   <header
     id="header"
-    class="fixed h-20 md:h-10 flex w-full items-start font-thin bg-gradient-to-b from-slate-800 z-50"
+    class="fixed h-20 md:h-10 flex w-full items-start font-thin bg-gradient-to-b from-slate-800 z-50 select-none"
     :class="[isActive ? 'w-fit' : 'w-full']"
   >
     <button class="absolute m-2" @click.prevent="toggleClass">
