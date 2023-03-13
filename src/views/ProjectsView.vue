@@ -40,7 +40,7 @@
           <a href="https://github.com/gorlimus/music">GitHub</a></template
         >
         <template #vercelLink>
-          <a href="https://music-seven-rosy.vercel.app/">demo</a></template
+          <a href="music-4iz79dg10-gorlimus.vercel.app">demo</a></template
         >
       </ItemProject>
       <ItemProject class="project-yel">
@@ -78,9 +78,7 @@
           <a href="https://github.com/gorlimus/Camp">GitHub</a></template
         >
         <template #vercelLink>
-          <a href="https://my-camp-lm8f3fxfs-gorlimus.vercel.app/"
-            >demo</a
-          ></template
+          <a href="my-camp-a3elaqhul-gorlimus.vercel.app">demo</a></template
         >
       </ItemProject>
     </div>
